@@ -22,7 +22,7 @@ jobs:
         go-version: 1.19
 
     - name: Build
-      run: go build -o mod-xmltv-generator 
+      run: CGO_ENABLED=0 go build -o mod-xmltv-generator 
       
     - uses: "marvinpinto/action-automatic-releases@latest"
       with:
